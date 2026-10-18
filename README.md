@@ -75,7 +75,7 @@ cd Noble-art-moveis-sob-medida
 npm start
 ```
 
-O ZIP contém a mesma versão dos arquivos, sem a pasta interna `.git`.
+O ZIP entregue preserva o site recuperado e não contém a pasta interna `.git`. Para acompanhar novas alterações e configurações, use o repositório.
 Antes de buscar alterações com `git pull`, salve suas mudanças em um commit.
 As próximas alterações devem partir deste repositório e preservar a sala 360°.
 
@@ -83,14 +83,14 @@ As próximas alterações devem partir deste repositório e preservar a sala 360
 
 Site existente: https://noble-art-moveis.netlify.app/
 
-Configuração para conectar o repositório no projeto existente:
+Publicação contínua conectada ao repositório em 18/10/2026:
 
 - Branch de produção: `main`.
 - Comando de build: `npm test && npm run build`.
 - Diretório publicado: `dist`.
 
 O arquivo `netlify.toml` já define `dist` como diretório publicado.
-A importação para o GitHub não estabelece, por si só, a publicação automática na Netlify.
+A Netlify acompanha a branch `main` deste repositório e executa os testes e o build antes de publicar. A primeira publicação conectada foi concluída com sucesso no deploy `6ad5097f3bd0780406ff8c5c`, a partir do commit `841b56c9aa86ceb8b17ba256c9d1ba4dbe225a25`.
 A pasta `.netlify/` é ignorada pelo Git.
 
 ## Licenças
@@ -103,10 +103,10 @@ Fontes Cormorant Garamond e Manrope usam SIL Open Font License; os textos estão
 
 1. Solicite a alteração no chat com acesso a este repositório.
 2. O agente consulta a versão atual, edita os arquivos, executa os testes e salva um commit no GitHub.
-3. Depois de vincular o repositório ao projeto existente na Netlify, cada atualização em `main` dispara testes, build e publicação automática.
+3. Cada atualização em `main` dispara testes, build e publicação automática na Netlify.
 4. Para alterações por pull request, a Netlify pode gerar uma prévia para revisão; a produção acompanha `main`.
 
-A configuração do build já está em `netlify.toml`. A conexão do repositório precisa ser concluída uma vez no painel da Netlify, em **Project configuration > Developer settings > Continuous deployment > Repository > Link repository**. Selecione **GitHub**, o repositório **kaiquepro602-cell/Noble-art-moveis-sob-medida** e a branch **main**, com base na raiz e publicação em **dist**. Autorize somente o acesso necessário a este repositório quando solicitado.
+A configuração do build está em `netlify.toml` e a conexão já foi concluída no projeto existente `noble-art-moveis`, preservando seu endereço público. O app Netlify foi instalado com seleção apenas deste repositório. Não é necessário enviar ZIPs manualmente para publicar as próximas alterações.
 
 O arquivo `AGENTS.md` orienta agentes de código a preservar a sala 360°, os contatos e o modo de execução. Ele não inicia tarefas por conta própria. O fluxo não precisa de uma chave da API OpenAI para publicar este site estático.
 
