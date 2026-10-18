@@ -90,3 +90,9 @@ body.menu-open .social-float { visibility: hidden; }
   #conteudo { display: flex; flex-direction: column; }
   #conteudo > #processo { order: 1; }
 }
+
+/* Development credit, aligned with the footer palette. */
+.footer-credit{margin:18px 0 0;text-align:right;font-size:10px;color:#929a84}
+.footer-credit a{color:var(--gold);text-decoration:underline;text-underline-offset:3px}
+.footer-credit a:hover{color:var(--cream)}
+@media(max-width:600px){.footer-credit{text-align:center;font-size:9px}}
