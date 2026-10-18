@@ -84,3 +84,9 @@ body.menu-open .social-float { visibility: hidden; }
 /* Presentation without decorative numbering. */
 .picture-label>span:first-child{color:#000}
 .process details>p{margin-left:0}
+
+/* On mobile, materials lead into contact; the process closes the page. */
+@media (max-width: 800px) {
+  #conteudo { display: flex; flex-direction: column; }
+  #conteudo > #processo { order: 1; }
+}
