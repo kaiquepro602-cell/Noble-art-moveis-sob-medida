@@ -29,6 +29,7 @@ Para o visualizador funcionar corretamente, use o endereço do servidor, em vez 
 - Banheiro e bancada com exploração das fotografias, zoom e pontos de detalhe.
 - Indicador minimalista de rolagem em dourado, ocultado ao começar a rolar.
 - Botão fixo do WhatsApp para `(47) 99110-2938`.
+- Crédito “Desenvolvido pela Azyra Tech” no rodapé, com link para https://www.instagram.com/azyratech/.
 - Imagens, fontes e bibliotecas carregadas de arquivos locais.
 
 A sala 360° é uma recriação ilustrativa por IA a partir da referência, identificada na interface.
