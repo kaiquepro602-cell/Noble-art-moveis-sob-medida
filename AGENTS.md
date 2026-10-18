@@ -14,7 +14,7 @@ Site institucional estático. O código editável e os arquivos publicados ficam
 
 - Preserve a sala 360° e seus recursos: `room-explorer.mjs`, `room-explorer.css`, `panorama-viewer.mjs`, `panorama-math.mjs` e `assets/sala-360-ia.webp`, salvo solicitação expressa de mudança.
 - A sala 360° é uma recriação ilustrativa por IA, com giro a partir de um ponto; mantenha essa identificação na interface.
-- Preserve a luvinha e o botão fixo de WhatsApp, salvo solicitação de mudança.
+- Preserve o indicador minimalista de rolagem e os botões fixos de WhatsApp e Instagram, salvo solicitação de mudança.
 - O WhatsApp confirmado é `5547991102938`. Ao alterá-lo, mantenha `config.whatsapp` em `dist/app.js` e `#whatsapp-contact` no HTML consistentes.
 - Mantenha o carregamento da panorâmica sob demanda, a foto original como alternativa, os controles de teclado e o respeito a movimento reduzido.
 - Não adicione bibliotecas, serviços externos ou mudanças visuais sem necessidade da tarefa.

@@ -6,8 +6,8 @@
 <title>Noble Art | Móveis sob medida em Gaspar e Blumenau</title>
 <meta name="description" content="Móveis sob medida em Gaspar, Blumenau e região. Conheça as referências da Noble Art e converse sobre seu ambiente.">
 <meta property="og:title" content="Noble Art — O seu espaço. Em cada detalhe."><meta property="og:description" content="Móveis sob medida para acompanhar a sua vida. Gaspar, Blumenau e região."><meta property="og:type" content="website"><meta property="og:image" content="https://noble-art-moveis.kaiquepro602.chatgpt.site/assets/sala.webp"><meta property="og:url" content="https://noble-art-moveis.kaiquepro602.chatgpt.site">
-<link rel="icon" href="/favicon.ico?v=round-na" sizes="any"><link rel="icon" type="image/png" sizes="64x64" href="/assets/favicon-noble-art-round-64.png"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon-noble-art-round.png"><link rel="preload" as="image" href="assets/sala.webp"><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="scroll-glove.css"><link rel="stylesheet" href="room-explorer.css">
-<script src="assets/gsap.min.js" defer></script><script src="assets/ScrollTrigger.min.js" defer></script><script src="app.js" defer></script><script src="scroll-glove.js" defer></script>
+<link rel="icon" href="/favicon.ico?v=round-na" sizes="any"><link rel="icon" type="image/png" sizes="64x64" href="/assets/favicon-noble-art-round-64.png"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon-noble-art-round.png"><link rel="preload" as="image" href="assets/sala.webp"><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="scroll-cue.css"><link rel="stylesheet" href="room-explorer.css">
+<script src="assets/gsap.min.js" defer></script><script src="assets/ScrollTrigger.min.js" defer></script><script src="app.js" defer></script><script src="scroll-cue.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#conteudo">Ir para o conteúdo</a>
@@ -22,26 +22,12 @@
 <section class="hero" id="inicio" aria-labelledby="hero-title">
 <div class="hero-copy">
 <p class="eyebrow"><span class="little-line"></span> FEITO PARA O SEU JEITO DE VIVER</p>
-<div class="hero-heading" id="hero-scroll-indicator" data-cue-hidden="false">
-<h1 id="hero-title"><span class="hero-title-line">O seu espaço.</span> <span class="hero-title-line">Em cada</span> <span class="hero-detail-line"><em>detalhe.</em><span class="scroll-glove-space" id="hero-scroll-glove" aria-hidden="true">
-<span class="scroll-glove-fit"><span class="gg-motion gg-animated"><span class="gg-sway gg-animated"><span class="gg-wrist gg-animated"><span class="gg-drawing">
-<span class="gg-touch-ring gg-animated"></span>
-<span class="gg-piece gg-finger gg-index gg-animated"></span>
-<span class="gg-piece gg-finger gg-middle"></span>
-<span class="gg-piece gg-finger gg-ring"></span>
-<span class="gg-piece gg-finger gg-thumb gg-animated"></span>
-<span class="gg-piece gg-palm"></span>
-<span class="gg-piece gg-fold gg-fold-one"></span>
-<span class="gg-piece gg-fold gg-fold-two"></span>
-<span class="gg-piece gg-fold gg-fold-three"></span>
-<span class="gg-piece gg-cuff"></span>
-</span></span></span></span></span>
-</span></span></h1>
-<button type="button" class="scroll-glove-dismiss" aria-label="Ocultar dica animada de rolagem" aria-controls="hero-scroll-glove" title="Ocultar dica de rolagem"></button>
+<div class="hero-heading">
+<h1 id="hero-title"><span class="hero-title-line">O seu espaço.</span> <span class="hero-title-line">Em cada</span> <span class="hero-detail-line"><em>detalhe.</em></span></h1>
 </div>
 <p class="hero-description">Móveis sob medida que dão forma ao seu espaço e acompanham a sua vida.</p>
 <a class="button button-outline" href="#contato">Vamos pensar no seu projeto</a>
-<div class="hero-bottom"><span>GASPAR · BLUMENAU · REGIÃO</span></div>
+<div class="hero-bottom"><span>GASPAR · BLUMENAU · REGIÃO</span><a class="scroll-cue" id="hero-scroll-cue" href="#ambientes" aria-label="Explorar os ambientes" title="Explorar ambientes"><span class="scroll-cue-track" aria-hidden="true"></span></a></div>
 </div>
 <div class="hero-picture"><img src="assets/sala.webp" alt="Sala com painel de TV em madeira, rack claro e iluminação indireta quente" width="1086" height="1448" fetchpriority="high"><div class="picture-label"><span>AMBIENTES PARA VIVER</span><span>Sala & convivência</span></div><a href="#ambientes" class="picture-explore" aria-label="Explorar ambientes">Explorar</a></div>
 <div class="hero-side">DESIGN QUE SE SENTE.</div>

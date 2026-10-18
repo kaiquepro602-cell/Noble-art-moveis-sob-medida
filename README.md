@@ -27,7 +27,7 @@ Para o visualizador funcionar corretamente, use o endereço do servidor, em vez 
 - Imagem panorâmica da sala incluída em `dist/assets/sala-360-ia.webp`.
 - Renderizador WebGL com foto original disponível como alternativa.
 - Banheiro e bancada com exploração das fotografias, zoom e pontos de detalhe.
-- Luvinha indicando a rolagem, interrompida no primeiro gesto.
+- Indicador minimalista de rolagem em dourado, ocultado ao começar a rolar.
 - Botão fixo do WhatsApp para `(47) 99110-2938`.
 - Imagens, fontes e bibliotecas carregadas de arquivos locais.
 
@@ -43,7 +43,7 @@ O próprio diretório `dist/` contém o código editável do site. Não existe u
 | `dist/index.html` | Textos, seções, links e diálogos |
 | `dist/style.css` | Cores, fontes, espaçamentos e responsividade |
 | `dist/app.js` | Configuração de contatos, menu, galerias, materiais e animações |
-| `dist/scroll-glove.css` e `.js` | Luvinha de indicação de rolagem |
+| `dist/scroll-cue.css` e `.js` | Indicador minimalista de rolagem |
 | `dist/room-explorer.mjs` e `.css` | Controles e detalhes dos ambientes |
 | `dist/panorama-viewer.mjs` | Visualizador WebGL da sala |
 | `dist/panorama-math.mjs` | Câmera e projeção dos detalhes |
