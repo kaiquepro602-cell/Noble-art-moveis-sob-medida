@@ -1,0 +1,96 @@
+/* Small, on-demand photo experience. Existing page branding stays in style.css. */
+.room-open{width:auto;min-height:44px;height:auto;padding:9px 13px;border-radius:0;gap:16px;font-size:10px;background:#11120fe8;backdrop-filter:none;display:flex;letter-spacing:.2px}
+.room-open>span{font-size:19px}
+#gallery-dialog{width:min(1280px,96vw);max-width:1280px;max-height:94svh}
+#gallery-dialog .gallery-layout{grid-template-columns:minmax(0,1.65fr) minmax(310px,1fr);min-height:min(740px,88svh)}
+#gallery-dialog .gallery-description{padding:78px 34px 30px;justify-content:flex-start;overflow-y:auto;max-height:88svh}
+#gallery-dialog .gallery-description h2{font-size:46px;line-height:1.03;margin:20px 0}
+#gallery-dialog .gallery-description>p{font-size:12px;line-height:1.85}
+#gallery-dialog .gallery-navigation{margin-top:auto;padding-top:26px}
+#gallery-dialog .gallery-navigation button{min-height:44px;min-width:44px}
+#gallery-dialog .gallery-description .button{font-size:10px;min-height:48px;gap:16px;margin:22px 0 0}
+#gallery-dialog [hidden]{display:none!important}
+#gallery-dialog .room-stage{position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;height:min(740px,88svh);min-width:0;isolation:isolate;background:#1b1e18;perspective:1200px;outline-offset:-4px}
+#gallery-dialog .room-surface{position:relative;width:100%;height:calc(100% - 148px);flex:none;transform-style:preserve-3d;transition:transform .5s cubic-bezier(.2,0,0,1);transform-origin:center;box-shadow:0 20px 65px #0005}
+#gallery-dialog[open].has-room-explorer .room-surface{will-change:transform}
+#gallery-dialog .room-surface #gallery-image{display:block;width:100%;height:100%;max-height:none;object-fit:contain;user-select:none;-webkit-user-drag:none;pointer-events:none}
+#gallery-dialog .room-stage[data-mode=explore]{cursor:grab;touch-action:none}
+#gallery-dialog .room-stage.is-dragging{cursor:grabbing}
+#gallery-dialog .room-stage.is-dragging .room-surface{transition:none}
+.room-topbar{position:absolute;top:20px;left:22px;right:22px;display:flex;justify-content:space-between;align-items:center;gap:8px;z-index:2;pointer-events:none}
+.room-badge{display:flex;align-items:center;gap:9px;font-size:8px;letter-spacing:1.6px;color:#e8e6d9;background:#1b1e18ed;padding:10px 11px;white-space:nowrap}
+.room-badge i{width:5px;height:5px;background:#c8a15a;border-radius:50%}
+.room-topbar button{min-height:44px;padding:8px 12px;font-size:19px;color:#f3efe8;background:#1b1e18ed;border:1px solid #d8c69a50;pointer-events:auto;display:flex;align-items:center;gap:8px}
+.room-topbar button span{font-size:10px}
+.room-toolbar{position:absolute;bottom:19px;left:22px;right:22px;display:flex;justify-content:space-between;align-items:center;gap:8px;z-index:2;cursor:default}
+.room-mode,.room-zoom{display:flex;align-items:center;background:#151812f5;border:1px solid #d8c69a40;padding:3px;gap:2px}
+.room-toolbar button{border:0;background:transparent;color:#d5d7cc;min-height:40px;min-width:40px;touch-action:manipulation}
+.room-mode button{padding:0 12px;font:500 10px var(--sans);white-space:nowrap}
+.room-mode button[aria-pressed=true]{background:#c8a15a;color:#151812}
+.room-zoom button{font-size:23px;line-height:1}
+.room-zoom button:last-child{font-size:21px;border-left:1px solid #d8c69a40;margin-left:3px}
+.room-zoom output{font-size:10px;min-width:38px;text-align:center;font-variant-numeric:tabular-nums;color:#e8e6d9}
+.room-toolbar button:disabled{opacity:.3;cursor:default}
+#gallery-dialog .room-help{position:absolute;bottom:78px;left:14px;right:14px;text-align:center;z-index:2;font-size:10px;color:#d5d7cc;margin:0;padding:5px 8px;background:#1b1e18ed;pointer-events:none;line-height:1.6}
+.room-hotspots{position:absolute;inset:0;transform-style:preserve-3d;pointer-events:none}
+.room-hotspot{position:absolute;transform:translate(-50%,-50%) translateZ(18px) scale(var(--inverse-zoom,1));width:44px;height:44px;border:1px solid #fff8;border-radius:50%;background:#141911cf;color:#fff;font:500 10px var(--sans);pointer-events:auto;box-shadow:0 0 0 4px #ffffff1a;touch-action:manipulation}
+.room-hotspot[aria-pressed=true]{color:#11120f;background:#e7c788;border-color:#e7c788;box-shadow:0 0 0 5px #e7c78833}
+.room-details{margin-top:24px;border-top:1px solid #d8c69a30;padding-top:20px}
+.room-details-label{display:block;font-size:8px;letter-spacing:1.5px;color:#a7ad9c;margin-bottom:12px}
+#room-detail-list{display:flex;flex-direction:column;gap:4px}
+#room-detail-list button{display:flex;gap:12px;text-align:left;align-items:center;width:100%;min-height:44px;background:transparent;border:1px solid transparent;border-bottom-color:#d8c69a1a;padding:8px 10px;font:400 12px var(--sans);color:#d9ddcf}
+#room-detail-list button>span{font-size:9px;color:#b8a16c}
+#room-detail-list button[aria-pressed=true]{border-color:#c8a15a70;color:#f0d49c;background:#c8a15a0a}
+#room-detail-text{font-size:11px;line-height:1.8;color:#abb39d;min-height:60px;margin:14px 0 0}
+#gallery-dialog .room-photo-note{font-size:9px;color:#a6ab9a;margin:14px 0 0}
+.room-load-status{position:absolute;z-index:3;top:45%;left:18px;right:18px;padding:18px;background:#141911f0;text-align:center;color:#f3efe8;font-size:12px}
+#gallery-dialog.room-expanded{width:100vw;max-width:none;height:100svh;max-height:none;margin:0;border:0}
+#gallery-dialog.room-expanded .gallery-layout{min-height:100svh}
+#gallery-dialog.room-expanded .room-stage{height:100svh}
+#gallery-dialog.room-expanded .gallery-description{max-height:100svh}
+@media(hover:hover){.room-hotspot:hover{border-color:#e7c788;background:#3b402d}.room-mode button:hover:not([aria-pressed=true]),.room-zoom button:hover:not(:disabled){background:#ffffff12}#room-detail-list button:hover{color:#f0d49c}}
+@media(max-width:850px){
+ #gallery-dialog .gallery-layout{grid-template-columns:minmax(0,1.25fr) minmax(280px,1fr)}
+ #gallery-dialog .gallery-description{padding:72px 22px 24px}
+ #gallery-dialog .gallery-description h2{font-size:39px}
+ .room-toolbar{left:12px;right:12px;flex-wrap:wrap;justify-content:center}
+ .room-mode button{padding:0 8px}
+ .room-zoom button{min-width:34px}
+ .room-topbar{left:12px;right:12px}
+ .room-topbar button span{display:none}
+}
+@media(max-width:650px){
+ #gallery-dialog{width:100vw;max-width:none;max-height:100svh;height:100svh;margin:0;border:0;overflow:auto}
+ #gallery-dialog .gallery-layout{display:block;min-height:100svh}
+ #gallery-dialog .room-stage{height:67svh;min-height:390px;max-height:700px}
+ #gallery-dialog .gallery-description{max-height:none;overflow:visible;padding:26px 6% 32px}
+ #gallery-dialog .gallery-description h2{font-size:40px;margin:12px 0}
+ #gallery-dialog .gallery-description>p{font-size:12px}
+ #gallery-dialog .dialog-close{position:fixed;top:calc(12px + env(safe-area-inset-top,0px));right:14px;background:#11170fe6;width:44px;height:44px}
+ .room-topbar{top:14px;right:70px;left:14px}
+ .room-badge{font-size:7px;letter-spacing:1.1px;padding:9px}
+ .room-toolbar{left:14px;right:14px;bottom:16px;flex-wrap:nowrap;justify-content:center;gap:6px}
+ .room-toolbar button{min-height:40px}
+ .room-mode button{font-size:9px;padding:0 8px;min-width:0}
+ .room-zoom button{min-width:34px}
+ .room-zoom output{font-size:9px;min-width:32px}
+ #gallery-dialog .room-help{bottom:73px;font-size:9px;left:14px;right:14px}
+ .room-details{margin-top:20px;padding-top:17px}
+ #room-detail-text{min-height:0}
+ #gallery-dialog.room-expanded .room-stage{height:100svh;max-height:none}
+ #gallery-dialog.room-expanded .gallery-description{display:none}
+ #gallery-dialog .gallery-navigation{margin-top:0;padding-top:24px}
+ .room-open{top:15px;right:15px;font-size:10px}
+}
+@media(max-width:359px){.room-toolbar{gap:5px;left:8px;right:8px}.room-mode button{font-size:8px;padding:0 6px}.room-zoom button{min-width:30px}.room-zoom button:last-child{margin-left:0}.room-badge{letter-spacing:.4px}}
+@media(prefers-reduced-motion:reduce){#gallery-dialog .room-surface{transition:none!important}}
+#gallery-dialog .room-stage[data-mode=panorama]{cursor:grab;touch-action:none}
+#gallery-dialog .room-stage[data-mode=panorama].is-dragging{cursor:grabbing}
+.room-panorama-canvas{position:absolute;inset:0;width:100%;height:100%;display:block;touch-action:none}
+#gallery-dialog .room-stage.is-panorama-ready .room-surface{visibility:hidden}
+.room-panorama-offer{border-top:1px solid #d8c69a30;padding-top:18px;margin-top:18px}
+#room-panorama:disabled{opacity:.5;cursor:wait}
+.room-panorama-offer>p{font-size:10px;line-height:1.7;color:#a6ab9a;margin:10px 0 0}
+.room-panorama-hotspots{position:absolute;inset:0;z-index:1;pointer-events:none}
+.room-sphere-hotspot{transform:translate(-50%,-50%);will-change:left,top}
+#gallery-dialog .room-mode #room-panorama{font-weight:600}

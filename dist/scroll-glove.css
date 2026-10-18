@@ -1,0 +1,255 @@
+/* Integração na abertura: espaço reservado à direita de “detalhe.”. */
+#hero-scroll-indicator {
+  --gg-duration: 3.6s;
+  --gg-play: paused;
+  --glove-fit: 0.82;
+  --glove-space: clamp(54px, 7vw, 96px);
+  position: relative;
+  display: flow-root;
+  width: 100%;
+}
+#hero-scroll-indicator[data-cue-ready="true"][data-cue-hidden="false"] { --gg-play: running; }
+.hero-title-line { display: block; }
+.hero-detail-line {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: clamp(8px, 1vw, 18px);
+}
+.hero-detail-line em { white-space: nowrap; }
+#hero-scroll-indicator .scroll-glove-space {
+  position: relative;
+  flex: 0 0 var(--glove-space);
+  height: 0;
+  align-self: flex-end;
+  margin-bottom: 0.08em;
+  pointer-events: none;
+  font-size: 0;
+  line-height: 1;
+  letter-spacing: normal;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 160ms ease-out, visibility 160ms;
+}
+#hero-scroll-indicator .scroll-glove-space span { display: block; }
+#hero-scroll-indicator .scroll-glove-fit {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 88px;
+  height: 112px;
+  transform: translateX(-50%) scale(var(--glove-fit));
+  transform-origin: 50% 100%;
+}
+#hero-scroll-indicator[data-cue-ready="true"][data-cue-hidden="false"] .scroll-glove-space {
+  opacity: 1;
+  visibility: visible;
+}
+.scroll-glove-dismiss {
+  position: absolute;
+  right: 0;
+  bottom: 27px;
+  width: var(--glove-space);
+  height: 128px;
+  min-width: 44px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  border-radius: 12px;
+  touch-action: pan-y;
+}
+#hero-scroll-indicator:not([data-cue-ready="true"]) .scroll-glove-dismiss,
+#hero-scroll-indicator[data-cue-hidden="true"] .scroll-glove-dismiss { display: none; }
+.hero .button-outline {
+  background: transparent;
+  color: var(--gold);
+  border-color: var(--gold);
+}
+.hero .button-outline:hover {
+  background: #cfad7210;
+  color: var(--cream);
+  transform: translateY(-2px);
+}
+@media (max-width: 1100px) {
+  #hero-scroll-indicator { --glove-fit: 0.68; }
+}
+@media (max-width: 800px) {
+  #hero-scroll-indicator { --glove-fit: 0.60; }
+}
+@media (max-width: 600px) {
+  #hero-scroll-indicator { --glove-fit: 0.62; --glove-space: 82px; }
+  .scroll-glove-dismiss { bottom: 23px; height: 112px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #hero-scroll-indicator .scroll-glove-space,
+  #hero-scroll-indicator .scroll-glove-dismiss { display: none; }
+}
+
+/* Desenho e movimento da luvinha aprovada, fornecida pelo usuário. */
+  #hero-scroll-indicator .gg-motion {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    width: 88px;
+    height: 112px;
+    transform-origin: 50% 90%;
+    animation: gg-glide var(--gg-duration) cubic-bezier(0.42, 0, 0.22, 1) infinite,
+      gg-appear var(--gg-duration) ease-in-out infinite;
+  }
+  #hero-scroll-indicator .gg-sway {
+    position: relative;
+    width: 88px;
+    height: 112px;
+    animation: gg-curve var(--gg-duration) cubic-bezier(0.37, 0, 0.63, 1) infinite;
+  }
+  #hero-scroll-indicator .gg-wrist {
+    width: 88px;
+    height: 112px;
+    transform-origin: 50% 92%;
+    transform: rotate(-12deg);
+    animation: gg-wrist-roll var(--gg-duration) cubic-bezier(0.37, 0, 0.63, 1) infinite;
+  }
+  #hero-scroll-indicator .gg-drawing {
+    position: relative;
+    width: 88px;
+    height: 112px;
+    transform: scale(0.76);
+    transform-origin: 50% 90%;
+    opacity: 0.72;
+    filter: drop-shadow(0 4px 5px rgba(0, 0, 0, 0.2));
+  }
+  #hero-scroll-indicator .gg-piece { position: absolute; box-sizing: border-box; }
+  #hero-scroll-indicator .gg-finger {
+    border: 1.3px solid #858a93;
+    background: linear-gradient(115deg, #e0e1e4, #c8cbd0 88%);
+    border-radius: 48% 48% 35% 35%;
+    box-shadow: inset 2px 1px 0 rgba(248, 249, 251, 0.45);
+  }
+  #hero-scroll-indicator .gg-index {
+    left: 24px;
+    top: 2px;
+    width: 20px;
+    height: 66px;
+    border-radius: 52% 48% 30% 35% / 20% 20% 38% 38%;
+    transform-origin: 50% 95%;
+    animation: gg-finger-flex var(--gg-duration) ease-in-out infinite;
+  }
+  #hero-scroll-indicator .gg-middle {
+    left: 43px;
+    top: 38px;
+    width: 23px;
+    height: 35px;
+    transform: rotate(6deg);
+  }
+  #hero-scroll-indicator .gg-ring {
+    left: 61px;
+    top: 44px;
+    width: 21px;
+    height: 32px;
+    transform: rotate(15deg);
+  }
+  #hero-scroll-indicator .gg-thumb {
+    left: 8px;
+    top: 48px;
+    width: 24px;
+    height: 39px;
+    transform: rotate(-42deg);
+    transform-origin: 50% 90%;
+    border-radius: 52% 52% 40% 46%;
+    animation: gg-thumb-flex var(--gg-duration) ease-in-out infinite;
+  }
+  #hero-scroll-indicator .gg-palm {
+    left: 19px;
+    top: 55px;
+    width: 63px;
+    height: 42px;
+    border-radius: 16px 13px 27px 29px;
+    background: linear-gradient(125deg, #dcdfe3, #d1d4d9 55%, #bfc3ca);
+    border-bottom: 1.3px solid #858a93;
+    border-right: 1px solid #969ba4;
+  }
+  #hero-scroll-indicator .gg-fold {
+    top: 62px;
+    width: 5px;
+    height: 16px;
+    border-right: 1.8px solid #858992;
+    border-radius: 50%;
+    transform: rotate(-13deg);
+  }
+  #hero-scroll-indicator .gg-fold-one { left: 40px; height: 14px; top: 64px; }
+  #hero-scroll-indicator .gg-fold-two { left: 50px; }
+  #hero-scroll-indicator .gg-fold-three { left: 60px; height: 14px; top: 63px; }
+  #hero-scroll-indicator .gg-cuff {
+    left: 30px;
+    top: 91px;
+    width: 44px;
+    height: 18px;
+    border: 1.3px solid #858a93;
+    border-radius: 45% 45% 42% 42%;
+    background: linear-gradient(180deg, #dee1e5, #c8ccd3);
+    box-shadow: inset 0 3px 0 rgba(246, 247, 249, 0.4);
+    transform: rotate(-2deg);
+  }
+  #hero-scroll-indicator .gg-cuff::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -2px;
+    width: 46px;
+    height: 10px;
+    box-sizing: border-box;
+    border: 1.2px solid #858a93;
+    border-radius: 50%;
+    background: #d5d9df;
+  }
+  #hero-scroll-indicator .gg-touch-ring {
+    position: absolute;
+    left: 17px;
+    top: -7px;
+    width: 34px;
+    height: 34px;
+    border: 1px solid rgba(209, 215, 224, 0.45);
+    border-radius: 50%;
+    opacity: 0;
+    animation: gg-touch var(--gg-duration) ease-out infinite;
+  }
+  #hero-scroll-indicator .gg-animated {
+    animation-play-state: var(--gg-play);
+  }
+
+  @keyframes gg-glide {
+    0%, 18% { transform: translateY(12px); }
+    73%, 100% { transform: translateY(-75px); }
+  }
+  @keyframes gg-appear {
+    0%, 4% { opacity: 0; }
+    17%, 63% { opacity: 0.94; }
+    81%, 100% { opacity: 0; }
+  }
+  @keyframes gg-curve {
+    0%, 16% { transform: translateX(-3px); }
+    35% { transform: translateX(-11px); }
+    72%, 100% { transform: translateX(12px); }
+  }
+  @keyframes gg-wrist-roll {
+    0%, 16% { transform: rotate(-12deg); }
+    29% { transform: rotate(-17deg); }
+    60% { transform: rotate(7deg); }
+    77%, 100% { transform: rotate(1deg); }
+  }
+  @keyframes gg-finger-flex {
+    0%, 14% { transform: rotate(-3deg); }
+    24% { transform: rotate(4deg); }
+    47%, 100% { transform: rotate(-3deg); }
+  }
+  @keyframes gg-thumb-flex {
+    0%, 15% { transform: rotate(-42deg); }
+    28% { transform: rotate(-35deg); }
+    58%, 100% { transform: rotate(-45deg); }
+  }
+  @keyframes gg-touch {
+    0%, 13% { opacity: 0; transform: scale(0.4); }
+    19% { opacity: 0.45; transform: scale(0.55); }
+    32%, 100% { opacity: 0; transform: scale(1.25); }
+  }

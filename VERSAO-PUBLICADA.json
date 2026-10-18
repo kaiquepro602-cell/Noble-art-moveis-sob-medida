@@ -1,0 +1,168 @@
+{
+  "source": "https://noble-art-moveis.netlify.app/",
+  "deploy_id": "6ad2cf7f0c831c66db6ed866",
+  "verified_at": "2026-10-18",
+  "files": [
+    {
+      "path": "app.js",
+      "bytes": 10094,
+      "sha256": "f7674bd112d74e6370aa49ba3a4fdd9e9329cdbffef03b1155bfc363ecad9db4",
+      "identical": true,
+      "status": 200
+    },
+    {
+      "path": "assets/ScrollTrigger.min.js",
+      "bytes": 44157,
+      "sha256": "308219390e5e3b84cda0c481e70caa9820883ae10bda44e6e9a149a81aac4b3f",
+      "identical": true,
+      "status": 200
+    },
+    {
+      "path": "assets/bancada-small.webp",
+      "bytes": 35340,
+      "sha256": "964662725a1602090c7aa94589d26c72b3ea578014d96170f81b7f110f0228c0",
+      "identical": true,
+      "status": 200
+    },
+    {
+      "path": "assets/bancada.webp",
+      "bytes": 108986,
+      "sha256": "654ecb4fde50a4a3fc36affa78a8f77ae00d9ab70eebbb3b12046be239fad9f8",
+      "identical": true,
+      "status": 200
+    },
+    {
+      "path": "assets/banheiro-small.webp",
+      "bytes": 35136,
+      "sha256": "e7f33b47e0760847c205fb69ba5680b0c6940c1c0f13b04ab5d1027734fe4572",
+      "identical": true,
+      "status": 200
+    },
+    {
+      "path": "assets/banheiro.webp",
+      "bytes": 115718,
+      "sha256": "afb9536789ca1cd82079a5b091ee76739f2ba6964b5453c84f723d8344874ae6",
+      "identical": true,
+      "status": 200
+    },
+    {
+      "path": "assets/editorial-italic.ttf",
+      "bytes": 293036,
+      "sha256": "0b9a8a33cfaa624d30f70f9b6686da769b319b8c37a55af16e29fef690108bbf",
+      "identical": true,
+      "status": 200
+    },
+    {
+      "path": "assets/editorial.ttf",
+      "bytes": 290236,
+      "sha256": "6d37a86241a25d63f8fe6018b4c083449886b7165c1acb15edd0f574f690ecf7",
+      "identical": true,
+      "status": 200
+    },
+    {
+      "path": "assets/gsap.min.js",
+      "bytes": 72435,
+      "sha256": "96c01b81f44a3290e2b4532f55e2c9534b2adc43273a19f3756b2cb41f0fd0b6",
+      "identical": true,
+      "status": 200
+    },
+    {
+      "path": "assets/manrope.ttf",
+      "bytes": 94972,
+      "sha256": "a13d9b41b0a471ce58f0e46d377fa3cc76615e4632c3b15eb397caadf7a13f0a",
+      "identical": true,
+      "status": 200
+    },
+    {
+      "path": "assets/noble-art-logo.webp",
+      "bytes": 42116,
+      "sha256": "84e6722a804fe6ed691290f173b5e26d3a730fa0faa4b5799051bd44a5bc5deb",
+      "identical": true,
+      "status": 200
+    },
+    {
+      "path": "assets/sala-360-ia.webp",
+      "bytes": 131602,
+      "sha256": "c9e69f89d5f33fe00cf8bd0a42e37aa5cb0c1379d8188cd70adc72aae75af303",
+      "identical": true,
+      "status": 200
+    },
+    {
+      "path": "assets/sala-panorama-ia.webp",
+      "bytes": 129466,
+      "sha256": "d1418f7f7426ea0fea098f41e4fa7ee2b14082873def37425066ce77cd7e7b7f",
+      "identical": true,
+      "status": 200
+    },
+    {
+      "path": "assets/sala-small.webp",
+      "bytes": 30230,
+      "sha256": "a1616663cbb8a8b005c6174436e57209148c5bef2c2ff568f71714235a6df34c",
+      "identical": true,
+      "status": 200
+    },
+    {
+      "path": "assets/sala.webp",
+      "bytes": 103422,
+      "sha256": "42633b2ba86fab3d00b43b5dcfae8c98ebef2173fb923b9be3f27f10aac94c8d",
+      "identical": true,
+      "status": 200
+    },
+    {
+      "path": "index.html",
+      "bytes": 21379,
+      "sha256": "e99b2fc8fe3e939a308c3aa46e5f83907dfd88465d1d1e29a008914bf793922a",
+      "identical": true,
+      "status": 200
+    },
+    {
+      "path": "panorama-math.mjs",
+      "bytes": 1655,
+      "sha256": "9e5883f141980253b85ee0bdbdea0047084ccf7767899369fcd3f42ff8021d59",
+      "identical": true,
+      "status": 200
+    },
+    {
+      "path": "panorama-viewer.mjs",
+      "bytes": 5063,
+      "sha256": "8af8b9cc558ccedd378c5f34d22f0c3436b8d1e2408a81066787195de9ba2385",
+      "identical": true,
+      "status": 200
+    },
+    {
+      "path": "room-explorer.css",
+      "bytes": 8731,
+      "sha256": "2ad9e39e8418b317cac6165e0651adc12496e6babe82d763a729bc38af031929",
+      "identical": true,
+      "status": 200
+    },
+    {
+      "path": "room-explorer.mjs",
+      "bytes": 15226,
+      "sha256": "4c6f1213b3e0b906f52ef416f9b63b200d848ef612a4346dbc07ef7aee5fe9e1",
+      "identical": true,
+      "status": 200
+    },
+    {
+      "path": "scroll-glove.css",
+      "bytes": 7326,
+      "sha256": "5033cd783d7ebaf0e1fa06642b1a365392d3c33b7ca8c5fe303a78f2c32df169",
+      "identical": true,
+      "status": 200
+    },
+    {
+      "path": "scroll-glove.js",
+      "bytes": 2671,
+      "sha256": "240ce19b3d62ec219e473ac86a17ef6c5d8d9f27dd691a5b1abaeae56409a6ff",
+      "identical": true,
+      "status": 200
+    },
+    {
+      "path": "style.css",
+      "bytes": 28447,
+      "sha256": "279e756f420e83d50bdf138d269f6c54a221b6e3631334ac7d75b224887d5ce4",
+      "identical": true,
+      "status": 200
+    }
+  ]
+}

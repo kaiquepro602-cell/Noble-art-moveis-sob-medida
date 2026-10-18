@@ -1,0 +1,17 @@
+{
+  "name": "noble-art-moveis",
+  "version": "1.1.0",
+  "private": true,
+  "description": "Site institucional Noble Art — Móveis sob medida",
+  "scripts": {
+    "check": "node scripts/build.mjs",
+    "dev": "node scripts/serve.mjs",
+    "start": "node scripts/serve.mjs",
+    "preview": "node scripts/serve.mjs 4173",
+    "build": "node scripts/build.mjs",
+    "test": "node --test tests/*.test.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
