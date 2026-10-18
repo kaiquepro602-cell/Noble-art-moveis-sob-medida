@@ -127,13 +127,8 @@
     const lines=[`Olá, ${config.brand}! Meu nome é ${String(data.get('name')).trim()}.`,`Sou de ${String(data.get('city')).trim()} e gostaria de conversar sobre um projeto.`,`Ambiente: ${data.get('room')}.`,`Referência de acabamento: ${materials[currentMaterial].name} (amostra ilustrativa).`];
     if(selectedProject && selectedProject.room===data.get('room'))lines.push(`Gostei da referência: ${selectedProject.title}`);
     lines.push('',`Minha ideia: ${String(data.get('idea')).trim()}`);
-    $('#message-output').value=lines.join('\n');$('#copy-status').textContent='';
-    showDialog($('#message-dialog'),form.querySelector('[type=submit]'));
-  });
-  $('#copy-message').addEventListener('click',async()=>{
-    const text=$('#message-output').value;
-    try{await navigator.clipboard.writeText(text);$('#copy-status').textContent='Mensagem copiada. Agora você pode colar no Instagram.';}
-    catch{const field=$('#message-output');field.focus();field.select();$('#copy-status').textContent='Selecione e copie o texto para enviar pelo Instagram.';}
+    const url=`https://wa.me/${config.whatsapp}?text=${encodeURIComponent(lines.join('\n'))}`;
+    window.location.assign(url);
   });
   $('#privacy-button').addEventListener('click',event=>showDialog($('#privacy-dialog'),event.currentTarget));
   $('#year').textContent=String(new Date().getFullYear());
