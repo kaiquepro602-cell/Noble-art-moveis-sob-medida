@@ -6,7 +6,7 @@
 @media(max-width:600px){.hero{display:flex;flex-direction:column;height:auto;max-height:none;padding:35px 6% 0;min-height:0;gap:0}.hero-copy{padding:0 0 28px;width:100%}.hero .eyebrow{font-size:7px;letter-spacing:1.6px;margin-bottom:25px}.hero h1{font-size:clamp(60px,14vw,85px);line-height:.94;margin-bottom:23px;letter-spacing:-1.5px}.hero h1 br:nth-child(2){display:none}.hero h1 em{display:inline-block}.hero-description{font-size:11px;max-width:280px;margin-bottom:23px;line-height:1.9}.hero .button{padding:14px 19px;min-height:50px;gap:28px}.hero-bottom{position:static;flex-direction:row;align-items:center;width:100%;margin-top:35px;gap:8px}.hero-bottom>a{font-size:8px;gap:8px}.hero-picture{height:460px;width:100%;margin-bottom:0;flex-shrink:0}.hero-picture>img{object-position:50% 46%}.picture-label{bottom:23px;left:22px}.picture-label>span:first-child{font-size:7px;letter-spacing:1px}.picture-label>span:last-child{font-size:24px}.picture-explore{width:44px;height:44px;right:23px;bottom:25px}.section-wrap{padding-left:6%;padding-right:6%}.essence{padding-top:60px;padding-bottom:60px;gap:27px}.section-kicker{font-size:8px}.essence h2{font-size:35px;line-height:1.15;margin-bottom:28px;letter-spacing:-.7px}.essence-bottom{grid-template-columns:1fr;gap:16px;max-width:350px}.essence p{font-size:11px}.projects{padding-top:60px;padding-bottom:60px}.section-top{display:block;margin-bottom:32px}.section-top h2{font-size:48px;margin-top:17px}.section-top>p{font-size:10px;margin:22px 0 0;max-width:none}.section-top>p br{display:none}.project-grid{display:block}.project{margin-bottom:35px}.project-main .project-image{aspect-ratio:.9}.project-secondary{padding-top:0}.project-secondary .project-image{aspect-ratio:1}.project-third .project-image{aspect-ratio:1}.project h3{font-size:29px}.project-caption{margin-top:19px}.project>p{font-size:10px}.image-chip{left:18px;bottom:18px;font-size:7px}.project-note{padding:22px 0 0;display:grid;grid-template-columns:1fr auto;gap:15px;align-items:center}.outline-star{display:none}.project-note h3{font-size:34px;line-height:1.05;margin:0}.project-note .text-link{font-size:8px;gap:16px;align-self:end}.detail-section{display:flex;flex-direction:column-reverse;min-height:0}.detail-copy{padding:58px 6% 35px}.detail-copy h2{font-size:53px;line-height:1;margin:24px 0}.detail-copy h2 br{display:none}.detail-copy h2 em{display:inline-block}.detail-body{font-size:11px;max-width:340px;min-height:44px}.detail-tabs{display:flex;border-bottom:1px solid var(--line);gap:17px;margin-top:25px}.detail-tabs>button{display:flex;flex:1;gap:7px;border-bottom:0!important;border-top:0;font-size:9px;padding:15px 0}.detail-tabs>button span:first-child{font-size:6px}.detail-tabs>button span[aria-hidden="true"]{display:none}.detail-tabs>button[aria-pressed=true]{border-bottom:1px solid var(--gold)!important}.photo-note{font-size:8px;margin-top:15px}.detail-photo{height:530px}.detail-indicator{font-size:6px;left:20px;bottom:20px}.materials{display:flex;flex-direction:column;padding-top:60px;padding-bottom:60px;gap:35px}.material-copy h2{font-size:55px;margin:22px 0}.material-copy h2 br{display:none}.material-copy h2 em{display:inline-block}.material-copy>p:not(.eyebrow){font-size:11px;max-width:340px}.swatches{margin-top:27px}.material-cta{font-size:10px}.material-disclaimer{font-size:8px;max-width:340px}.material-art{width:100%;min-height:460px}.art-index{font-size:7px;left:23px;top:23px}.art-caption{font-size:19px;left:23px;bottom:23px}.sample-front>span{font-size:7px}.process{display:block;padding-top:60px;padding-bottom:60px}.process-heading h2{font-size:50px;margin:22px 0}.process-heading h2 br{display:none}.process-heading h2 em{display:inline-block}.process-steps{padding-top:25px}.process summary{padding:22px 0;gap:20px}.process summary h3{font-size:23px}.process details>p{font-size:11px;margin-left:32px}.contact{display:block;padding-top:65px;padding-bottom:65px}.contact h2{font-size:56px;margin:24px 0}.contact-copy>p:not(.eyebrow){font-size:11px}.contact-instagram{margin-top:28px}.project-form{padding-top:50px}.form-row{grid-template-columns:1fr 1.1fr;gap:20px}.project-form input,.project-form select,.project-form textarea{font-size:13px}.form-note{font-size:9px;line-height:1.8}.footer{padding-top:25px}.footer-top{grid-template-columns:100px 1fr 36px;gap:20px}.footer-top>img{height:100px;width:100px}.footer-top>p{font-size:27px}.footer-top>div{grid-column:1/4;grid-row:2;flex-direction:row;justify-content:space-between;margin-top:10px;font-size:10px}.back-top{grid-column:3;grid-row:1}.footer-bottom{font-size:7px;flex-wrap:wrap;gap:14px;margin-top:25px}.footer-bottom>span:nth-child(2){display:none}.gallery-dialog{max-height:92svh;overflow:auto}.gallery-layout{display:block;min-height:0}.gallery-photo{height:48svh}.gallery-photo img{width:100%;height:100%;object-fit:contain}.gallery-description{padding:25px}.gallery-description h2{font-size:38px;margin:15px 0}.gallery-description>p{font-size:11px}.gallery-description .button{font-size:9px;margin-top:10px}.gallery-navigation{margin-top:23px}.message-dialog{padding:35px 25px}.message-dialog h2{font-size:46px}.message-dialog textarea{font-size:12px}.eyebrow{font-size:8px;letter-spacing:1.5px}}
 /* Fixed social links: Instagram above WhatsApp, with room for the radar. */
 .social-float {
-  --social-size: 60px;
+  --social-size: 50px;
   --social-bottom: calc(24px + env(safe-area-inset-bottom, 0px));
   position: fixed;
   right: calc(24px + env(safe-area-inset-right, 0px));
@@ -16,7 +16,7 @@
   place-items: center;
   width: var(--social-size);
   height: var(--social-size);
-  padding: 14px;
+  padding: 12px;
   border: 0;
   border-radius: 50%;
   color: #fff;
@@ -24,7 +24,7 @@
   touch-action: manipulation;
   isolation: isolate;
 }
-.social-float svg { display: block; width: 32px; height: 32px; }
+.social-float svg { display: block; width: 26px; height: 26px; }
 .social-float:focus-visible { outline: 3px solid #fff; outline-offset: 5px; }
 .whatsapp-float {
   background: #25d366;
@@ -64,12 +64,12 @@ body.menu-open .social-float { visibility: hidden; }
 }
 @media (max-width: 600px) {
   .social-float {
-    --social-size: 56px;
+    --social-size: 46px;
     --social-bottom: calc(18px + env(safe-area-inset-bottom, 0px));
-    padding: 13px;
+    padding: 11px;
     right: calc(18px + env(safe-area-inset-right, 0px));
   }
-  .social-float svg { width: 30px; height: 30px; }
+  .social-float svg { width: 24px; height: 24px; }
   .footer { padding-bottom: calc(180px + env(safe-area-inset-bottom, 0px)); }
 }
 @media (prefers-reduced-motion: reduce) {
