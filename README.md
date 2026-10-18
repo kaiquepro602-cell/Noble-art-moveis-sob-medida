@@ -86,7 +86,7 @@ Site existente: https://noble-art-moveis.netlify.app/
 Configuração para conectar o repositório no projeto existente:
 
 - Branch de produção: `main`.
-- Comando de build: `npm run build`.
+- Comando de build: `npm test && npm run build`.
 - Diretório publicado: `dist`.
 
 O arquivo `netlify.toml` já define `dist` como diretório publicado.
@@ -98,3 +98,16 @@ A pasta `.netlify/` é ignorada pelo Git.
 Fotos e identidade fornecidas pelo solicitante. Panorâmica da sala gerada por IA.
 GSAP e ScrollTrigger 3.13.0 têm seus cabeçalhos preservados e seguem https://gsap.com/community/standard-license/.
 Fontes Cormorant Garamond e Manrope usam SIL Open Font License; os textos estão em `licenses/`.
+
+## Fluxo ChatGPT + GitHub + Netlify
+
+1. Solicite a alteração no chat com acesso a este repositório.
+2. O agente consulta a versão atual, edita os arquivos, executa os testes e salva um commit no GitHub.
+3. Depois de vincular o repositório ao projeto existente na Netlify, cada atualização em `main` dispara testes, build e publicação automática.
+4. Para alterações por pull request, a Netlify pode gerar uma prévia para revisão; a produção acompanha `main`.
+
+A configuração do build já está em `netlify.toml`. A conexão do repositório precisa ser concluída uma vez no painel da Netlify, em **Project configuration > Developer settings > Continuous deployment > Repository > Link repository**. Selecione **GitHub**, o repositório **kaiquepro602-cell/Noble-art-moveis-sob-medida** e a branch **main**, com base na raiz e publicação em **dist**. Autorize somente o acesso necessário a este repositório quando solicitado.
+
+O arquivo `AGENTS.md` orienta agentes de código a preservar a sala 360°, os contatos e o modo de execução. Ele não inicia tarefas por conta própria. O fluxo não precisa de uma chave da API OpenAI para publicar este site estático.
+
+Referência oficial: https://docs.netlify.com/build/git-workflows/repo-permissions-linking/
